@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The Million Pixels Homepage</title>
+
+  <meta name="keywords" content="million pixels homepage, home, page, million, pixels, pixel, university, degree, business, student, internet, marketing, ad marketing, pixels advertising, pixels ad, advertising, ideas, advertising, banner, ad, pixel banner, links, entrepreneur, millionaire, alexandr matveyev, matveyev, alex, matveyev,">
+  <meta name="description" content="The website of Alexandr Matveyev, an entrepreneur, who has a hope tp pay his student loan by selling 1 million pixels of internet ad space for $0.80 each.">
+  <meta name="ROBOTS" content="ALL">
+  <meta name="author" content="Alexandr Matveyev">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Web browser tab icon -->
+  <link rel="icon" href="">
+  
+  <!-- jquery -->
+  <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+  
+  <!-- bootstrap script -->
+  <script type="text/javascript" src="static/bootstrap/js/bootstrap.min.js"></script>
+  
+  <!-- bootstrap style -->
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+  
+  <!-- My style -->
+  <link rel="stylesheet" href="static/css/main_style.css">
+
+  <!-- Using Flask Framework to inject the icon for the website -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='/img/icon/favicon.ico') }}">
+
+</head>
+<body>
+
+  <div class="pre-header">
+  </div>
+  <div class="header">
+    <div class="info-bar">
+      <div class="page-name">
+        <a href="{{ url_for('index1') }}" class="logo-link">The Million Pixels Homepage</a>
+      </div>
+      <!-- <div class="coordinates">0x, 0y</div> -->
+      <div class="area">
+        <img src="static/img/grid/square-selection-2.png">
+        <span class="area-text"> 0 squares</span>
+        <span class="area-size-text"> 0x0</span>
+      </div>
+      <div id="per_square" class="square">
+        <img src="static/img/grid/square-hover.png"><span id="per_square_text"></span>
+      </div>
+      <div id="s_available" class="available">
+        <img src="static/img/grid/square-hover.png"><span id="s_available_text"></span>
+      </div>
+    </div>
+
+    <div class="menu">
+      <img src="static/img/grid/menu/square-selection-m1.png">
+      <a href="{{ url_for('index2') }}" title="Home Page" class="tmp">Home</a>
+      <span> <img src="static/img/grid/menu/square-selection-m2.png"></span>
+      <a href="{{ url_for('buysquares') }}" title="Buy one square or multiple" class="tmp">Buy Squares</a>
+      <span> <img src="static/img/grid/menu/square-selection-m3.png"></span>
+      <a href="{{ url_for('about') }}" title="About this website and author" class="tmp">About</a>
+      <span> <img src="static/img/grid/menu/square-selection-m4.png"></span>
+      <!-- <a href="{{ url_for('contact') }}" title="My contact information" class="tmp">Contact</a> -->
+      <a href="https://twitter.com/AlexandrMtv" title="twitter.com" class="tmp">Contact</a>
+    </div>
+  </div>
+  <div class="main-container">
+
+    <div class="container-static" title="">
+  
+      <div class="text-fragment-a" style="left: 440px; top: 0px; text-align: center !important;">
+        <div class="text-fragment-b">
+
+          <p>Thank you for visiting my website.</p>
+          <p>I want to pay off my <strong>student loan</strong> with the help of this website.</p>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <p>
+            The original idea belongs to Alex Tew.<br />
+            I was inspired by his <a href="http://www.milliondollarhomepage.com/" target="_blank">website</a> created in 2005.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer">
+    I am not responsible for the content of external web-sites. Image and Gif animation featured on this page are © of their respective owners. The Million Pixels Homepage © 2020 Alexand Matveyev
+    <a href="mailto:themillionpixelshomepage@gmail.com" title="My contact information" class="tmp">Contact</a>. Idea based on Alex Tew 2005 <a href="http://www.milliondollarhomepage.com/" target="_blank">website</a>.
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- -------------------------------------------------- -->
+  <!-- My script -->
+  <script src="static/js/main_script.js"></script>
+  <!-- -------------------------------------------------- -->
+</body>
+</html>

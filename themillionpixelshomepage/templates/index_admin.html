@@ -1,0 +1,255 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The Million Pixels Homepage</title>
+
+  <meta name="keywords" content="million pixels homepage, home, page, million, pixels, pixel, university, degree, business, student, internet, marketing, ad marketing, pixels advertising, pixels ad, advertising, ideas, advertising, banner, ad, pixel banner, links, entrepreneur, millionaire, alexandr matveyev, matveyev, alex, matveyev,">
+  <meta name="description" content="The website of Alexandr Matveyev, an entrepreneur, who has a hope tp pay his student loan by selling 1 million pixels of internet ad space for $0.80 each.">
+  <meta name="ROBOTS" content="ALL">
+  <meta name="author" content="Alexandr Matveyev">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSRF Protection -->
+  <!-- -------------------------------------------- -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  
+  <!--
+  <script type="text/javascript">
+    var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  </script>
+  -->
+  <!-- -------------------------------------------- -->
+
+  <!-- Web browser tab icon -->
+  <link rel="icon" href="">
+  
+  <!-- jquery -->
+  <script type="text/javascript" src="{{url_for('static', filename='/js/jquery-3.4.1.min.js')}}"></script>
+  
+  <!-- bootstrap script -->
+  <script type="text/javascript" src="{{url_for('static', filename='/bootstrap/js/bootstrap.min.js')}}"></script>
+  
+  <!-- bootstrap style -->
+  <link rel="stylesheet" href="{{url_for('static', filename='/bootstrap/css/bootstrap.min.css')}}">
+  
+  <!-- My style -->
+  <link rel="stylesheet" href="{{url_for('static', filename='/css/main_style.css')}}">
+
+  <!-- Using Flask Framework to inject the icon for the website -->
+  <link rel="shortcut icon" href= "{{ url_for('static', filename='/img/icon/favicon.ico') }}">
+
+</head>
+<body>
+
+  <div class="pre-header">
+  </div>
+  <div class="header">
+    <div class="page-name">
+      <a href="{{ url_for('index1') }}" class="logo-link">The Million Pixels Homepage</a>
+    </div>
+    <!-- <div class="coordinates">0x, 0y</div> -->
+    <div class="area">
+      <img src="static/img/grid/square-selection-1.png">
+      <span class="area-text"> 0 squares</span>
+      <span class="area-size-text"> 0x0</span>
+    </div>
+    <div id="per_square" class="square">
+      <img src="static/img/grid/square-hover.png"><span id="per_square_text_a"></span>
+    </div>
+    <div id="s_available" class="available">
+      <img src="static/img/grid/square-hover.png"><span id="s_available_text_a"></span>
+    </div>
+    
+    <div class="menu">
+      <img src="static/img/grid/menu/square-selection-m1.png">
+      <a href="{{ url_for('index2') }}" title="Home Page" class="tmp">Home</a>
+      <span> <img src="static/img/grid/menu/square-selection-m2.png"></span>
+      <a href="{{ url_for('buysquares') }}" title="Buy one square or multiple" class="tmp">Buy Squares</a>
+      <span> <img src="static/img/grid/menu/square-selection-m3.png"></span>
+      <a href="{{ url_for('about') }}" title="About this website and author" class="tmp">About</a>
+      <span> <img src="static/img/grid/menu/square-selection-m4.png"></span>
+      <a href="{{ url_for('contact') }}" title="My contact information" class="tmp">Contact</a>
+    </div>
+
+    <!--
+    <div class="info-bar">
+
+    </div>
+    -->
+  </div>
+
+  <div class="main-container">
+
+    <div id="video_container" class="video-container" title="">
+      
+      <!-- tooltip that show coordinates -->
+      <!-- ------------------------------------------------------------------------- -->
+      <!-- tooltip -->
+      <span id="custom_tooltip" class="custom-tooltip"></span>
+      <!-- tooltip ad-name -->
+      <span id="tooltip_ad_name" class="tooltip-ad-name"></span>
+      <!-- tooltip ad-link -->
+      <span id="tooltip_ad_link" class="tooltip-ad-link"></span>
+      <!-- ------------------------------------------------------------------------- -->
+
+      <!-- price-tooltip and buy-cancel tooltip -->
+      <!-- ------------------------------------------------------------------------- -->
+      <!-- tooltip that shows price -->
+      <span id="price_tooltip" class="price-tooltip"></span>
+
+      <!-- tooltip that shows buttons -->
+      <span id="buy_cancel_buttons" class="buy-cancel-buttons"></span>
+
+      <!-- background for tooltip-price -->
+      <span id="price_tooltip_bg" class="price-tooltip-bg"></span>
+      <!-- ------------------------------------------------------------------------- -->
+
+      <!-- box-pointer and selection region -->
+      <!-- ------------------------------------------------------------------------- -->
+      <!-- initial box-pointer -->
+      <span id="square_box_a" class="square-box-a" name="active"></span>
+
+      <!-- second box-pointer -->
+      <span id="square_box_b" class="square-box-b" name="inactive"></span>
+      
+      <!-- selected area indicator -->
+      <div id="selected_squares" class="selected-squares"></div>
+
+      <!-- it will indicate the width and the height of the selected area -->
+      <div id="selected_squares_info" class="selected-squares-info"></div>
+      <!-- ------------------------------------------------------------------------- -->
+
+      <!-- Popup window to get squares -->
+      <!-- ------------------------------------------------------------------------- -->
+      <div id="purchase_window" class="purchase-window">
+        <!-- Name of this form -->
+        <div id="form_name" class="form-name">Buy Squares</div>
+
+        <!-- Display information about selected area to the user -->
+        <div id="form_info_price" class="form-info-price">
+          <span class="fi-1">
+            <span class="form-info-1"></span>
+          </span>
+        </div>
+        <div id="form_info_size" class="form-info-size">
+          <span class="fi-2">
+            <span class="form-info-2"></span>
+          </span>
+        </div>
+
+        <div id="form_info_size_kb" class="form-info-size-kb">
+          <span class="fi-2-1">
+            <span class="form-info-2-1"></span>
+          </span>
+        </div>
+
+        <div id="form_info" class="form-info">
+          <span class="fi-3">
+            <img src="static/img/grid/square-selection-1.png"><span class="form-info-3"></span>
+          </span><br>
+          <span class="fi-4">
+            <img src="static/img/grid/square-hover.png"><span class="form-info-4"></span>
+          </span>
+        </div>
+
+        <!-- Form -->
+        <form id="form" class="form" enctype=multipart/form-data>
+
+          <div class="form-group">
+            <input id="form_i_fname" type="text" class="form-control form-i-fname" 
+            placeholder="Full name" autocomplete="off" maxlength="35" required><br>
+            
+            <input id="form_i_ad_name" type="text" class="form-control form-i-ad-name" 
+            placeholder="Company - Ad Name OR Ad Name" autocomplete="off" maxlength="80" required>
+
+            <input id="form_i_email" type="email" class="form-control form-i-email" 
+            placeholder="name@example.com" autocomplete="off" maxlength="50" required>
+
+            <input id="form_i_link" type="text" class="form-control form-i-link" 
+            placeholder="https://www.example.com" autocomplete="off" maxlength="80" required>
+          </div>
+          <div class="input-group form-group file-brows-group">
+            <span class="media-file-label">Upload .gif, .png, .jpg </span>
+            <label class="input-group-btn">
+                <span class="btn btn-primary file-brows-btn">
+                    Browse… <input id="ad_file" class="browse-files" type="file" style="display: none;" 
+                    accept=".gif,.png,.jpg" required>
+                </span>
+            </label>
+          </div>
+          <div id="form_info_message" class="form-info-message">
+            <span class="fi-5">
+              <span class="form-info-5"></span>
+            </span>
+          </div>
+          <div id="submit_section" class="form-group">
+            <input id="form_submit" class="btn btn-success form-submit" type="submit" value="Submit">
+            <input id="form_cancel" class="btn btn-secondary form-cancel" type="button" value="Cancel">
+          </div>
+        </form> 
+      </div>
+      <!-- this div just shade for a bit all things that are behind the purchase window -->
+      <div id="inactive_layer" class="inactive-layer"></div>
+      <!-- this div shade out webpage while server do computations after used uploaded image -->
+      <div id="inactive_layer_loading" class="inactive-layer-loading"></div>
+      <!-- ------------------------------------------------------------------------- -->
+
+      <!-- Popup window to let user know the information submission was successfully -->
+      <!-- ------------------------------------------------------------------------- -->
+      <div id="success_window" class="success-window">
+        <!-- Name of this form -->
+        <div id="form_success_name" class="form-success-name">Success!</div>
+        <div id="form_success_text" class="form-success-text">
+          Dear customer you will receive an email shortly to perform payments in order for your ad to be placed on this website. <br /><br />
+          <u>Payments accepted only via PayPal.</u>
+        </div>
+        <div id="form_success_info" class="form-success-info">
+        </div>
+        <div id="form_success_button" class="form-success-button">
+          ОК
+        </div>
+      </div>
+      <!-- this div just shade for a bit all things that are behind the purchase window -->
+      <div id="inactive_layer_2" class="inactive-layer-2"></div>
+      <!-- ------------------------------------------------------------------------- -->
+
+      <!-- grid -->
+      <!-- ------------------------------------------------------------------------- -->
+      <div id="background_grid" class="background-grid"></div>
+      <!-- ------------------------------------------------------------------------- -->
+  
+      <!-- ------------------------------------------------------------------------- -->
+      <!-- Video fragments starts here -->
+      <!-- ------------------------------------------------------------------------- -->
+      <span id="fragments">
+        
+        {% include 'fragments.html' %}
+        
+      </span>
+      <!-- ------------------------------------------------------------------------- -->
+      <!-- Video fragments ends here -->
+      <!-- ------------------------------------------------------------------------- -->
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+    I am not responsible for the content of external sites. Image and Gif animation featured on this page are © of their respective owners. The Million Pixels Homepage © 2020 Alexand Matveyev
+    <a href="mailto:themillionpixelshomepage@gmail.com" title="My contact information" class="tmp">Contact</a>. Idea based on Alex Tew 2005 <a href="http://www.milliondollarhomepage.com/" target="_blank">website</a>.
+  </div>
+
+
+  <!-- Scripts -->
+  <!-- -------------------------------------------------- -->
+  <!-- My script -->
+  <script src="{{url_for('static', filename='/js/main_script_a.js')}}"></script>
+  <script src="{{url_for('static', filename='/js/preview_tooltip.js')}}"></script>
+  <script src="{{url_for('static', filename='/js/purchase_squares_a.js')}}"></script>
+  <script src="{{url_for('static', filename='/js/area_selection.js')}}"></script>
+  <!-- -------------------------------------------------- -->
+</body>
+</html>

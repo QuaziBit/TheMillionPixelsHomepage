@@ -1,0 +1,853 @@
+/* Author: Alexandr Matveyev */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(201, 201, 201);
+}
+
+/* Header */
+/* ------------------------------------------ */
+.pre-header {
+    background-color: rgb(81, 81, 81);
+    color: white;
+    margin: 0 auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 1320px;
+    height: 24px;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bolder;
+    z-index: 3;
+}
+
+.header {
+    background-color: rgb(230, 230, 230);
+    margin: 0 auto;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 1320px;
+    height: 40px;
+    display: block;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.menu {
+    color: rgb(63, 63, 63); 
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    width:340px;
+    float: right;
+    /*border: 1px solid rgb(255, 255, 255);*/
+    z-index: 4;
+}
+
+.info-bar {
+    display: block;
+}
+
+.page-name {
+    color:  rgb(63, 63, 63);
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+    width: 300px;
+    float: left;
+    /*border: 1px solid rgb(255, 255, 255);*/
+    z-index: 4;
+}
+
+.available {
+    color:  rgb(63, 63, 63);
+    font-size: 18px;
+    width: 230px;
+    /*border: 1px solid rgb(255, 255, 255);*/
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    float: right;
+    z-index: 4;
+}
+
+.square {
+    color:  rgb(63, 63, 63);
+    font-size: 18px;
+    width: 150px;
+    /*border: 1px solid rgb(255, 255, 255);*/
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    float: right;
+    z-index: 4;
+}
+
+.coordinates {
+    color:  rgb(63, 63, 63);
+    font-size: 12px;
+    width: 180px;
+    /*border: 1px solid rgb(255, 255, 255);*/
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    float: right;
+
+    z-index: 4;
+}
+
+.area {
+    color:  rgb(63, 63, 63);
+    font-size: 18px;
+    width: 235px;
+    /*border: 1px solid rgb(255, 255, 255);*/
+    text-align: right;
+    box-sizing: border-box;
+    display: block;
+    float: right;
+
+    z-index: 4;
+}
+/* ------------------------------------------ */
+
+/* Videos container */
+/* ------------------------------------------ */
+.main-container {
+    width: 1320px;
+    height: 1000px;
+    margin: 0 auto;
+    display: block;
+    z-index: -2;
+}
+
+.video-container {
+    background-color: rgb(0, 0, 0);
+    width: 1320px;
+    height: 1000px;
+    font-size: 0;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.site-link {
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+    display: inline-block;
+    position: absolute;
+}
+.video-fragment {
+    /* test */
+    /*background-color: rgba(14, 14, 14, 0);*/
+
+    /*background-color: rgb(14, 14, 14);*/
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+    display: block;
+}
+.vf-extra {
+    /*background-color: rgb(30, 185, 220);*/
+    /*border: 1px dashed rgb(171, 171, 171);*/
+    border: 1px dashed rgb(0, 0, 0); 
+    opacity: 0.5;
+}
+
+.background-grid {
+    background-image: url(../img/grid/grid-2.png);
+    background-color: rgb(71, 71, 71);
+    
+    width: 1320px;
+    height: 1000px;
+
+    display: block;
+    position: absolute;
+
+    z-index: 1;
+}
+
+/* Used on secondary pages */
+.container-static {
+    background-color: rgb(183, 183, 183);
+
+    width: 1320px;
+    height: 1000px;
+    font-size: 0;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.how-to-get-squares {
+    color: rgb(0, 0, 0);
+
+    top: 0px;
+    left: 260px;
+
+    font-size: 17px;
+    text-align: center;
+
+    margin: 0;
+    padding: 20px 100px 100px 100px;
+    display: block;
+    position: absolute;
+
+    width: 800px;
+    height: 1000px;
+
+    z-index: 4;
+}
+.how-to-get-squares-set {
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    display: inline-block;
+}
+.custom-text {
+    font-size: 12px;
+}
+
+.text-fragment-a {
+    color: rgb(0, 0, 0);
+
+    font-size: 16px;
+    text-align: left;
+
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+    display: block;
+    position: absolute;
+
+    width: 1320px;
+    height: 1000px;
+
+    z-index: 4;
+}
+.text-fragment-b {
+    margin: 0;
+    padding: 10px 30px 10px 30px;
+    z-index: 5;
+    
+    width: 440px;
+    height: 400px;
+
+    display: block;
+}
+/* ------------------------------------------ */
+
+/* Main-logo link */
+/* ------------------------------------------ */
+.logo-link:link {
+    color: rgb(47, 47, 47);
+    text-decoration: none;
+}
+.logo-link:active {
+    color: rgb(47, 47, 47);
+    text-decoration: none;
+}
+.logo-link:visited {
+    color: rgb(47, 47, 47);
+    text-decoration: none;
+}
+.logo-link:hover {
+    color: #000000;
+    text-decoration: none;
+}
+/* ------------------------------------------ */
+
+
+/* Working with links */
+/* ------------------------------------------ */
+a:link {
+    color: rgb(63, 63, 63);
+    text-decoration: underline;
+}
+a:active {
+    color: rgb(63, 63, 63);
+    text-decoration: underline;
+}
+a:visited {
+    color: rgb(63, 63, 63);
+    text-decoration: underline;
+}
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+/* ------------------------------------------ */
+
+/* Footer */
+/* ------------------------------------------ */
+.footer {
+    background-color: rgb(230, 230, 230);
+    margin: 0 auto;
+    font-size: 11px;
+    color: rgb(63, 63, 63);
+    text-align: center;
+    width: 1320px;
+    height: 40px;
+    padding: 12px;
+    display: block;
+    box-sizing: border-box;
+    z-index: 3;
+}
+/* ------------------------------------------ */
+
+/* Custom tooltip */
+/* ------------------------------------------ */
+.custom-tooltip {
+    background-color: rgb(200, 0, 0);
+    color: white;
+
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    font-size: 14px;
+    padding: 8px 8px 8px 8px;
+    
+    z-index: 99999;
+}
+.tooltip-ad-name {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    font-size: 14px;
+    padding: 8px 8px 8px 8px;
+    
+    z-index: 99999;
+}
+.tooltip-ad-link {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    font-size: 14px;
+    padding: 8px 8px 8px 8px;
+    
+    z-index: 99999;
+}
+
+.custom-tooltip-name {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 2px 2px 4px 2px;
+    padding: 2px;
+}
+
+.custom-tooltip-link {
+    background-color: rgb(0, 0, 0);
+    margin: 2px 4px 2px 2px;
+    padding: 2px;
+}
+
+.custom-tooltip-link:link {
+    color: white;
+}
+
+.custom-tooltip-link:active {
+    color: white;
+}
+
+.custom-tooltip-link:visited {
+    color: white;
+}
+
+.custom-tooltip-link:hover {
+    color: white;
+}
+/* ------------------------------------------ */
+
+/* square pointer */
+/* ------------------------------------------ */
+.selected-squares {
+    background-color: rgb(53, 255, 157);
+    opacity: 0.4;
+
+    border: 1px solid rgb(255, 255, 255);
+    display: none;
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+.selected-squares-info {
+    background-color: rgb(194, 100, 0);
+    
+    text-align: left;
+    position: absolute;
+    display: none;
+
+    color: white;
+    font-weight: bolder;
+
+    font-size: 14px;
+    padding: 5px 12px 5px 12px;
+
+    z-index: 99;
+}
+
+.square-box-a {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border: 1px solid white;
+
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    position: absolute;
+    display: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    z-index: 991;
+}
+
+.square-box-b {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border: 1px solid white;
+
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    position: absolute;
+    display: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    z-index: 991;
+}
+/* ------------------------------------------ */
+
+/* price-tooltip and buy-cancel tooltip */
+/* ------------------------------------------ */
+.price-tooltip {
+    background-color: rgb(194, 100, 0);
+    
+    text-align: left;
+    position: absolute;
+    display: none;
+
+    color: white;
+    font-weight: bolder;
+
+    font-size: 14px;
+    padding: 5px 12px 5px 12px;
+
+    z-index: 99;
+}
+
+.buy-cancel-buttons {
+
+    background-color: rgb(194, 100, 0);
+    border-left: 4px solid black;
+
+    text-align: center;
+    position: absolute;
+    display: none;
+
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+    margin-left: 10px;
+
+    z-index: 999;
+}
+
+.buy-button {
+    background-color: rgb(233, 32, 32);
+
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+
+    padding: 7px 15px 7px 15px;
+    margin-right: 0px;
+}
+.buy-button:hover {
+    color: rgb(253, 189, 69);
+    cursor: default;
+}
+
+.cancel-button {
+    background-color: rgb(129, 129, 129);
+
+    color: rgb(224, 224, 224);
+    font-weight: bolder;
+
+    padding: 7px 15px 7px 15px;
+}
+.cancel-button:hover {
+    color: rgb(0, 0, 0);
+    cursor: default;
+}
+
+.price-tooltip-bg {
+    background-color: rgb(255, 255, 255);
+    border-right: 1px solid black;
+
+    position: absolute;
+    display: none;
+
+    font-size: 14px;
+    padding: 2px 8px 2px 8px;
+
+    z-index: 999;
+}
+/* ------------------------------------------ */
+
+/* Form */
+/* ------------------------------------------ */
+.purchase-window {
+    background-color: rgb(230, 230, 230);
+    color: rgb(63, 63, 63);
+
+    font-size: 18px;
+
+    text-align: center;
+    position: absolute;
+    display: none;
+
+    width: 300px;
+
+    padding: 0px;
+
+    z-index: 99999;
+}
+
+/* just a name of the form */
+.form-name {
+    background-color: rgb(230, 230, 230);
+    color: rgb(63, 63, 63); 
+
+    font-size: 18px;
+
+    text-align: center;
+    font-weight: bolder;
+    display: block;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 0px;
+
+    z-index: 99999;
+}
+
+/* inputs: fields */
+.form-i-fname, .form-i-ad-name, .form-i-email, .form-i-link {
+    color: rgb(63, 63, 63);
+    border-radius: 0px;
+
+    text-align: left;
+    display: inline-block;
+
+    width: 280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    z-index: 99999;
+}
+
+.file-brows-group {
+    border: 1px solid rgb(189, 189, 189);
+    background-color: rgb(179, 179, 179);
+    margin-left: 10px;
+    display: block;
+    width: 280px;
+}
+.media-file-label {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 14px;
+    padding-top: 7px;
+    padding-left: 10px;
+    margin-right: 3px;
+
+    float: left;
+    display: block;
+    width: 180px;
+}
+.file-brows-btn {
+    border-radius: 0px;
+    width: 95px;
+    display: block;
+}
+
+/* inputs: buttons */
+.form-submit, .form-cancel {
+    border-radius: 0px;
+
+    width: 137px;
+
+    font-size: 18px;
+
+    padding: 2px 2px 2px 2px;
+    margin: 0px;
+
+    z-index: 99999;
+}
+
+/* used to display information about selected are in the form */
+.form-info-price {
+    background-color: rgb(200, 0, 0);
+    color: white;
+
+    /*
+    background-color: #5cb85c;
+    color: rgb(255, 255, 255);
+    */
+
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    display: block;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+
+    z-index: 99999;
+}
+.form-info-size {
+    background-color: rgb(63, 63, 63);
+    color: rgb(232, 232, 232);
+
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+    display: block;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    /*margin-bottom: 25px;*/
+
+    z-index: 99999;
+}
+.form-info-size-kb {
+    background-color: rgb(6, 228, 95);
+    color: rgb(63, 63, 63);
+
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: center;
+    display: block;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 25px;
+
+    z-index: 99999;
+}
+.form-info {
+    background-color: rgb(230, 230, 230);
+    color: rgb(63, 63, 63);
+
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: left;
+    display: none;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 8px;
+
+    z-index: 99999;
+}
+.form-info-message {
+    background-color: #d52424;
+    color: rgb(255, 255, 255);
+
+    font-size: 12px;
+    font-weight: bolder;
+    text-align: center;
+    display: none;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 15px;
+
+    z-index: 99999;
+}
+
+
+.form-info-1 {
+    font-size: 16px;
+}
+.form-info-2 {
+    font-size: 14px;
+}
+.form-info-2-1 {
+    font-size: 14px;
+}
+/* ------------------------------------------ */
+
+/* here we setting transparent background after user did confirmed selected area */
+/* ------------------------------------------ */
+.inactive-layer {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    
+    width: 1320px;
+    height: 1000px;
+
+    display: none;
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 999;
+}
+
+.inactive-layer-loading {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.9;
+    
+    width: 1320px;
+    height: 1000px;
+
+    display: none;
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 999999;
+}
+/* ------------------------------------------ */
+
+/* success window */
+.success-window {
+    background-color: rgb(230, 230, 230);
+    color: rgb(63, 63, 63);
+
+    font-size: 18px;
+
+    text-align: center;
+    position: absolute;
+    display: none;
+
+    width: 300px;
+
+    padding: 0px;
+
+    z-index: 99999;
+}
+
+/* just a name of the form */
+.form-success-name {
+    /*background-color: rgb(205, 30, 30);*/
+    background-color: rgb(30, 205, 120);
+    color: rgb(255, 255, 255); 
+
+    font-size: 18px;
+
+    text-align: center;
+    font-weight: bolder;
+    display: block;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 0px;
+
+    z-index: 99999;
+}
+
+.form-success-text {
+    background-color: rgb(63, 63, 63);
+    color: rgb(232, 232, 232);
+
+    font-size: 14px;
+
+    text-align: center;
+    font-weight: bolder;
+    display: block;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 0px;
+
+    z-index: 99999;
+}
+
+.form-success-info {
+    background-color: #d52424;
+    color: rgb(255, 255, 255);
+
+    font-size: 14px;
+
+    text-align: center;
+    font-weight: bolder;
+    display: block;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 0px;
+
+    z-index: 99999;
+}
+.form-success-button {
+    background-color: rgb(54, 99, 189);
+    color: rgb(255, 255, 255); 
+
+    font-size: 18px;
+
+    text-align: center;
+    font-weight: bolder;
+    display: block;
+
+    width: 300px;
+
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 0px;
+
+    z-index: 99999;
+}
+.form-success-button:hover {
+    color: rgb(30, 205, 120); 
+    cursor: pointer;
+}
+
+/* here we setting transparent background after user did confirmed selected area */
+/* ------------------------------------------ */
+.inactive-layer-2 {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    
+    width: 1320px;
+    height: 1000px;
+
+    display: none;
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 999;
+}
+/* ------------------------------------------ */
