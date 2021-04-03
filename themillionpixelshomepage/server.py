@@ -1,4 +1,4 @@
-# Author: Alexand Matveyev
+# Author: Olexand "Alex" Matveyev
 # pip installs:
 # 1: pip install numpy==1.19.3
 # 2: pip install opencv-python for cv2
